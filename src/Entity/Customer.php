@@ -22,8 +22,8 @@ use Symfony\Component\Validator\Constraints as Assert;
  *     normalizationContext={
  *           "groups"={"customers_read"}
  *     },
- *     collectionOperations={"GET":{"path":"/clients"}, "POST"},
- *     itemOperations={"GET":{"path":"/clients/{id}"}, "PUT", "DELETE"},
+ *     collectionOperations={"GET":{"path":"/clients"}, "POST":{"path":"/clients"}},
+ *     itemOperations={"GET":{"path":"/clients/{id}"}, "PUT":{"path":"/clients/{id}"}, "DELETE":{"path":"/clients/{id}"}},
  *     subresourceOperations={
  *          "invoices_get_subresource"={"path"="/clients/{id}/factures"}
  *     }
@@ -45,6 +45,7 @@ class Customer
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups({"customers_read", "invoices_read"})
      */
     private $id;
 

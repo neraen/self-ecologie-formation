@@ -14,7 +14,9 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
- * @ApiResource()
+ * @ApiResource(
+ *     normalizationContext={"groups"={"users_read"}}
+ * )
  * @UniqueEntity("email", message="Un utilisateur ayant cette adresse email, existe déjà")
  */
 class User implements UserInterface
@@ -23,13 +25,13 @@ class User implements UserInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Groups({"customers_read", "invoices_read"})
+     * @Groups({"customers_read", "invoices_read", "users_read"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
-     * @Groups({"customers_read", "invoices_read"})
+     * @Groups({"customers_read", "invoices_read", "users_read"})
      * @Assert\NotBlank(message="L'email doit être renseigné")
      * @Assert\Email(message="L'email n'est pas valide")
      */
@@ -49,14 +51,14 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"customers_read", "invoices_read"})
+     * @Groups({"customers_read", "invoices_read", "users_read"})
      * @Assert\NotBlank(message="Le prénom doit être renseigné")
      */
     private $firstName;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"customers_read", "invoices_read"})
+     * @Groups({"customers_read", "invoices_read", "users_read"})
      * @Assert\NotBlank(message="Le nom doit être renseigné")
      */
     private $lastName;

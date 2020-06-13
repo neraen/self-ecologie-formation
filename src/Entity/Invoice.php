@@ -15,19 +15,22 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Entity(repositoryClass=InvoiceRepository::class)
  * @ApiResource(
  *     attributes={
-            "pagination_enabled" = true,
+            "pagination_enabled" = false,
  *          "pagination_items_per_page" = 20,
  *          "order": {"amount":"desc"}
  *     },
  *     itemOperations={"GET",
  *          "PUT",
  *          "DELETE",
- *          "INCREMENT"={
- *              "method"="post",
- *              "path"="/invoices/{id}/increment",
- *              "controller"="App\Controller\InvoiceIncrementationController",
- *              "openapi_context"={"summary"="Incrémente une facture", "description"="INcrémente le chrono d'une facture donnée"}
- *          }
+ *          "increment"={
+     *      "method"="post",
+     *      "path"="/invoices/{id}/increment",
+     *      "controller"="App\Controller\InvoiceIncrementationController",
+     *      "swagger_context"={
+     *          "summary"="Incrémente une facture",
+     *          "description"="Incrémente le chrono d'une facture donnée"
+     *       }
+     *     }
  *     },
  *     normalizationContext={
  *          "groups"={"invoices_read"}
@@ -62,7 +65,6 @@ class Invoice
     /**
      * @ORM\Column(type="datetime")
      * @Groups({"invoices_read", "customers_read", "invoices_subresource"})
-     * @Assert\DateTime(message="La date doit être au format YYYY-MM-DD")
      */
     private $sentAt;
 
@@ -70,7 +72,7 @@ class Invoice
      * @ORM\Column(type="string", length=255)
      * @Groups({"invoices_read", "customers_read", "invoices_subresource"})
      * @Assert\NotBlank(message="Le status de la facture est obligatoire")
-     * @Assert\Choice(choices={"SENT,"PAID","CANCELLED"}, message="Le status doit être SENT, PAID ou CANCELLED")
+     * @Assert\Choice(choices={"SENT","PAID","CANCELLED"}, message="Le status doit être SENT, PAID ou CANCELLED")
      */
     private $status;
 
