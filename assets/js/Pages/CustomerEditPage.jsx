@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Field from "../Components/forms/Field";
 import {Link} from "react-router-dom";
-import CustomerAPI from "../Services/customersApi"
+import CustomerAPI from "../ServicesApi/customersApi"
 import {toast} from "react-toastify";
 
 const CustomerEditPage = ({match, history}) => {

@@ -8,7 +8,7 @@ import { HashRouter, Switch, Route, withRouter } from "react-router-dom";
 import CustomerPage from "./Pages/CustomerPage";
 import InvoicesPage from "./Pages/InvoicesPage";
 import LoginPage from "./Pages/LoginPage";
-import authAPI from "./Services/authAPI";
+import authAPI from "./ServicesApi/authApi";
 import AuthContext from "./contexts/AuthContext";
 import PrivateRoute from "./Components/PrivateRoute";
 import CustomerEditPage from "./Pages/CustomerEditPage";

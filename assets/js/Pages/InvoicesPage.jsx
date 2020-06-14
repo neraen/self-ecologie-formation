@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import Pagination from "../Components/Pagination";
 import moment from "moment";
-import InvoicesAPI from "../Services/InvoicesApi";
+import InvoicesAPI from "../ServicesApi/InvoicesApi";
 import {Link} from "react-router-dom";
 import {toast} from "react-toastify";
 import TableLoader from "../Components/loaders/TableLoader.";
