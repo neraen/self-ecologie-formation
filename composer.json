@@ -70,11 +70,11 @@
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd",
-            "doctrine:migrations:migrate --no-interaction": "symfony-cmd",
-            "php artisan clear-compiled": "@php artisan clear-compiled",
-            "chmod -R 777 public/": "bash"
+            "doctrine:migrations:migrate --no-interaction": "symfony-cmd"
         },
         "post-install-cmd": [
+            "@php artisan clear-compiled",
+            "chmod -R 777 public/",
             "@auto-scripts"
         ],
         "post-update-cmd": [
