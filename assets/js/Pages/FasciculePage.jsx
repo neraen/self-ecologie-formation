@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import Pagination from "../Components/Pagination";
-import FasciculeAPI from "../FasciculeAPI"
+import FasciculeAPI from "../fasciculeAPI"
 import {Link} from "react-router-dom";
 import {toast} from "react-toastify";
 import TableLoader from "../Components/loaders/TableLoader.";
