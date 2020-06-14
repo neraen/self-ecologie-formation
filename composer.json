@@ -74,14 +74,12 @@
         },
         "post-install-cmd": [
             "@autorisations",
-            "@artisan",
             "@auto-scripts"
         ],
         "post-update-cmd": [
             "@auto-scripts"
         ],
-        "autorisations": "chmod -R 777 public/",
-        "artisan": "php artisan clear-compiled"
+        "autorisations": "chmod -R 777 public/"
     },
     "conflict": {
         "symfony/symfony": "*"
