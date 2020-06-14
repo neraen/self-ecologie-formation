@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Field from "../Components/forms/Field";
 import {Link} from "react-router-dom";
-import UsersAPI from "../Services/UsersAPI";
+import UsersAPI from "../Services/UsersApi";
 import {toast} from "react-toastify";
 
 
