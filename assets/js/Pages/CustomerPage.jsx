@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import Pagination from "../Components/Pagination";
-import CustomerAPI from "../services/CustomersAPI"
+import CustomersAPI from "../services/CustomersAPI"
 import {Link} from "react-router-dom";
 import {toast} from "react-toastify";
 import TableLoader from "../Components/loaders/TableLoader.";
@@ -20,7 +20,7 @@ const CustomerPage = () => {
         setCustomers(customers.filter(customer => customer.id !== id));
 
         try{
-            await CustomerAPI.delete(id);
+            await CustomersAPI.delete(id);
             toast.success("Le client a bien été supprimé")
         } catch(error) {
             setCustomers(originalCustomers);
@@ -40,7 +40,7 @@ const CustomerPage = () => {
     // Permet d'aller récuperer les customers
     const fetchCustomers = async () => {
         try{
-            const data = await CustomerAPI.findAll();
+            const data = await CustomersAPI.findAll();
             setCustomers(data);
             setLoading(false);
         } catch(error){
@@ -52,10 +52,6 @@ const CustomerPage = () => {
     useEffect(() => {
         fetchCustomers()
     }, []);
-
-    /*CustomerAPI.findAll()
-             .then(data => setCustomers(data))
-             .catch(error => console.log(error.response))*/
 
 
     //Filtrage des customers en fonction de la recherche
