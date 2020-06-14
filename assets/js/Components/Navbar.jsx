@@ -1,5 +1,5 @@
 import React, {useContext} from "react"
-import authAPI from "../ServicesApi/authApi";
+import authAPI from "../authApi";
 import {NavLink} from "react-router-dom";
 import AuthContext from "../contexts/AuthContext";
 import {toast} from "react-toastify";

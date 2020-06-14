@@ -1,6 +1,6 @@
 import axios from "axios";
 import jwtDecode from "jwt-decode";
-import {LOGIN_API} from "../config";
+import {LOGIN_API} from "./config";
 
 
 /**

@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import Field from "../Components/forms/Field";
 import {Link} from "react-router-dom";
-import CustomerAPI from "../ServicesApi/customersApi"
+import CustomerAPI from "../customersApi"
 import Select from "../Components/forms/Select";
-import InvoicesAPI from "../ServicesApi/InvoicesApi";
+import InvoicesAPI from "../InvoicesApi";
 import {toast} from "react-toastify";
 
 const InvoiceEditPage = ({match, history}) => {
