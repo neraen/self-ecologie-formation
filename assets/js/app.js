@@ -15,6 +15,7 @@ import CustomerEditPage from "./Pages/CustomerEditPage";
 import InvoiceEditPage from "./Pages/InvoiceEditPage";
 import RegisterPage from "./Pages/RegisterPage";
 import {toast, ToastContainer} from "react-toastify";
+import FasciculePage from "./Pages/FasciculePage";
 
 authAPI.setup();
 const App = () => {
@@ -31,8 +32,13 @@ const App = () => {
         <AuthContext.Provider value={contextValue}>
             <HashRouter>
                 <NavbarWithrouter/>
+                <section className="banner" style={{background: "url('./img/asymmetry-botanical-bright-ecology-1029592.jpg')"}} >
 
+                </section>
+                <h1 className="main-title">Self écologie : pour une écologie de soi</h1>
+                <h3 className="second-title"> Formation en naturopathie </h3>
                 <main className="container pt-5">
+
                     <Switch>
                         <Route path="/login" component={LoginPage} />
                         <Route path="/register" component={RegisterPage} />
@@ -40,6 +46,7 @@ const App = () => {
                         <PrivateRoute path="/customers" component={CustomerPage} />
                         <PrivateRoute path="/invoices/:id" component={InvoiceEditPage} />
                         <PrivateRoute path="/invoices" component={InvoicesPage} />
+                        <PrivateRoute path="/fascicules" component={FasciculePage} />
                         <Route path="/" component={Homepage} />
                     </Switch>
                 </main>
