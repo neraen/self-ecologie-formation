@@ -11,7 +11,7 @@ body {
     height: 510px;
     background-position: center;
     background-size: cover;
-    filter: blur(0px);
+    overflow: hidden;
 
 }
 

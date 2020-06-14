@@ -27,13 +27,15 @@ const App = () => {
         isAuthenticated,
         setIsAuthenticated
     }
-
+//style={{background: "url('./img/asymmetry-botanical-bright-ecology-1029592.jpg')"}}
     return(
         <AuthContext.Provider value={contextValue}>
             <HashRouter>
                 <NavbarWithrouter/>
-                <section className="banner" style={{background: "url('./img/asymmetry-botanical-bright-ecology-1029592.jpg')"}} >
-
+                <section className="banner" >
+                    <video loop autoPlay width="100%">
+                        <source src="./img/banner-video2.mp4" type="video/mp4"/>
+                    </video>
                 </section>
                 <h1 className="main-title">Self écologie : pour une écologie de soi</h1>
                 <h3 className="second-title"> Formation en naturopathie </h3>
