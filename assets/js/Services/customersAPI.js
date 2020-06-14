@@ -2,7 +2,7 @@ import axios from "axios";
 import {CUSTOMERS_API} from "../config";
 
 function findAll(){
-    return  axios.get("http://localhost:8000/api/clients")
+    return  axios.get(CUSTOMERS_API)
         .then(response => response.data['hydra:member']);
 }
 
