@@ -27,6 +27,7 @@ const App = () => {
         isAuthenticated,
         setIsAuthenticated
     }
+
 //style={{background: "url('./img/asymmetry-botanical-bright-ecology-1029592.jpg')"}}
     return(
         <AuthContext.Provider value={contextValue}>
@@ -52,6 +53,9 @@ const App = () => {
                         <Route path="/" component={Homepage} />
                     </Switch>
                 </main>
+                <footer>
+
+                </footer>
             </HashRouter>
             <ToastContainer position={toast.POSITION.BOTTOM_RIGHT}/>
         </AuthContext.Provider>

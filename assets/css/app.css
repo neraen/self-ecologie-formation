@@ -47,17 +47,67 @@ body {
     display: flex;
     justify-content: space-around;
     position: relative;
-    top: -85px;
+    top: -100px;
 }
 
 .top-card{
     display: flex;
     background: aliceblue;
-    padding-left: 0
+    padding-left: 0;
+    width: 27%;
+    height: 90px;
 }
 
 .top-card-img-container{
     background-position: center!important;
     background-size: cover!important;
-    width: 80px;
+    min-width: 90px;
+}
+
+
+/* THEMATIQUES */
+.thematiques-container{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.element-thematique{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.element-thematique:hover{
+    border-bottom: black solid 1px;
+}
+
+.circle-icon{
+    padding: 15px;
+    border-radius: 50%;
+    /* width: auto; */
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    /*color: green;*/
+}
+
+/* INFORMATION */
+
+.section-information{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-information{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+
+footer{
+    height: 70px;
+    background: #ecf0f1 ;
+    margin-top: 50px;
 }
