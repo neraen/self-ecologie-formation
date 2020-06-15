@@ -8,26 +8,26 @@ const HomePage = (props) => {
                     <div className="top-card-img-container mr-3" style={{background: "url('./img/cards/card1.jpg')"}}>
 
                     </div>
-                    <div className="top-card-text-container">
-                        <h4 className="text-info">lorem ipsum</h4>
+                    <div className="top-card-text-container mt-2">
+                        <h5 className="text-info">lorem ipsum</h5>
                         <p>lorem ipsim</p>
                     </div>
                 </div>
                 <div className="top-card col-3 shadow ">
-                    <div className="top-card-img">
-                        <img src="" alt="" />
+                    <div className="top-card-img-container mr-3" style={{background: "url('./img/cards/card.jpg')"}}>
+
                     </div>
-                    <div className="top-card-text-container">
-                        <h4 className="text-info">lorem ipsum</h4>
+                    <div className="top-card-text-container mt-2">
+                        <h5 className="text-warning">lorem ipsum</h5>
                         <p>lorem ipsim</p>
                     </div>
                 </div>
-                <div className="top-card col-3 shadow ">
-                    <div className="top-card-img">
-                        <img src="" alt="" />
+                <div className="top-card col-3 shadow " >
+                    <div className="top-card-img-container mr-3" style={{background: "url('./img/cards/card1.jpg')"}}>
+
                     </div>
-                    <div className="top-card-text-container">
-                        <h4 className="text-info">lorem ipsum</h4>
+                    <div className="top-card-text-container mt-2">
+                        <h5 className="text-success">lorem ipsum</h5>
                         <p>lorem ipsim</p>
                     </div>
                 </div>

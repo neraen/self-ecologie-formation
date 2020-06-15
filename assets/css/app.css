@@ -57,11 +57,7 @@ body {
 }
 
 .top-card-img-container{
-    background-position: center;
-    background-size: cover;
+    background-position: center!important;
+    background-size: cover!important;
     width: 80px;
-}
-
-.top-card-img{
-    width: 60px;
 }
