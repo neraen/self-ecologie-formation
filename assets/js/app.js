@@ -34,7 +34,7 @@ const App = () => {
             <HashRouter>
                 <NavbarWithrouter/>
                 <section className="banner" >
-                    <video loop autoPlay width="100%">
+                    <video loop autoPlay muted width="100%">
                         <source src="./img/banner-video2.mp4" type="video/mp4"/>
                     </video>
                 </section>
