@@ -22,7 +22,7 @@
         "dotenv": "^8.2.0",
         "jwt-decode": "^2.2.0",
         "material-icons-react": "^1.0.4",
-        "moment": "^2.26.0",
+        "moment": "^2.29.4",
         "react": "^16.8.6",
         "react-content-loader": "^5.0.4",
         "react-dom": "^16.8.6",
